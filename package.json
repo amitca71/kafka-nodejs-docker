@@ -1,5 +1,5 @@
 {
-  "name": "Kafkasample",
+  "name": "kafkasample",
   "version": "1.0.0",
   "description": "Sample kafka hands-on hello world example",
   "main": "index.js",
@@ -15,6 +15,14 @@
   "author": "Dilipan Somasundaram",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "^1.11.0"
-  }
+    "kafkajs": "^1.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamdilip/kafka-nodejs-docker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tamdilip/kafka-nodejs-docker/issues"
+  },
+  "homepage": "https://github.com/tamdilip/kafka-nodejs-docker#readme"
 }
