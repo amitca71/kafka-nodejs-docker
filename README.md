@@ -11,6 +11,9 @@ Secondary docker commands to start/stop containers.
         $ docker-compose stop
         $ docker-compose start
 ```
+### node pre requisite
+ * npm init
+ * npm install
 ### Kafka Node scripts
 
  * `node create-topic.js`  - creates a kafka topic with specified number of partitions.
