@@ -1,27 +1,18 @@
-
 const { Kafka } = require('kafkajs');
-const { KAFKA: {
-    BROKERS,
-    CLIENT_ID,
-    CONSUMER_GROUP_ID,
-    TOPIC
-} } = require('./config');
+const config = require("./config");
 
 run();
 async function run() {
     try {
-        const kafka = new Kafka({
-            clientId: CLIENT_ID,
-            brokers: BROKERS
-        });
+        const kafka = new Kafka(config.kafka);
 
-        const consumer = kafka.consumer({ groupId: CONSUMER_GROUP_ID });
+        const consumer = kafka.consumer({ groupId: config.consumer.groupId });
         console.log('Connecting to Kafka . . .');
         await consumer.connect();
         console.log('Connected to Kafka !!');
 
         await consumer.subscribe({
-            topic: TOPIC,
+            topic: config.app.topic,
             fromBeginning: true
         });
 
