@@ -13,7 +13,7 @@ async function run() {
 
         await consumer.subscribe({
             topic: config.app.topic,
-            fromBeginning: true
+            fromBeginning: false
         });
 
         await consumer.run({
