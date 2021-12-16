@@ -27,11 +27,13 @@ const app = {
   topic: process.env.TOPIC || "sample-topic-19",  //the topic to send to 
   compression: process.env.KAFKA_COMPRESSION || Kafka.None ,  //other built in option in Kafka.GZIP
   acks: "all",  //set to 2 or all, so reports succss only with at leats one replica commited 
-  fromBeginning: false
+  fromBeginning: true
 };
 const producer = {
   allowAutoTopicCreation: process.env.KAFKA_ALLOW_AUTO_TOPIC_CREATION || true, 
   maxInFlightRequests: 1, //set to one in order to make sure order is kept on retry
+//  idempotent: true ,  //required for EOS
+
 };
 
 module.exports = {
