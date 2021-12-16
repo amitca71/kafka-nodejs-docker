@@ -12,6 +12,7 @@ Secondary docker commands to start/stop containers.
         $ docker-compose start
 ```
 ### node pre requisite
+ * cd kafkajs
  * npm init
  * npm install
 ### Kafka Node scripts
