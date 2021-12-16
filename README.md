@@ -1,4 +1,4 @@
-# 📣 kafka-nodejs-docker
+# 📣 kafka-nodejs/python-docker
 Simple Kafka sample to boot up zookeeper and kafka service with docker and nodejs scripts to create a topic, a consumer listening to the topic and a producer to publish message with specified partion to a topic.
 
 ### Boot Zookeeper and Kafka
